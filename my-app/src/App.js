@@ -3,6 +3,7 @@ import "./App.css";
 import Sailor from "./Sailor";
 
 function App() {
+  
   const moonSailors = [
     {
       marinera: "Sailor Moon",
@@ -96,13 +97,18 @@ function App() {
   ];
 
   return (
-    <div className="App"> <input type="text" placeholder="Find yor Sailor Guardian"/>
+    <div className="App">
       <h1 className="app-title">Sailor Guardians</h1>
-      <div className="App">
-          {moonSailors.map((e) => (
-            <Sailor marinera={e.marinera} identity={e.identity} img={e.img} birthday={e.birthday} about={e.about} color={e.color} />
-          ))}
-        </div>
+      <input type="text" placeholder={"Find your Sailor Guardian..."} 
+      onChange={e => {Sailor (e.target.value)}}/>
+      {moonSailors.map((e) => {
+        return (
+          <div> <Sailor marinera={e.marinera} identity={e.indentity} img={e.img} birthday={e.birthday} about={e.about} color={e.color} /> </div>
+          
+          );
+      })}
+
+
     </div>
   );
 
@@ -110,3 +116,4 @@ function App() {
 
 
 export default App;
+

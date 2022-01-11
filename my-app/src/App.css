@@ -1,17 +1,13 @@
 body {
-  background-image: linear-gradient(
-    to top,
-    #a7a6cb 0%,
-    #8989ba 52%,
-    #8989ba 100%
-  );
+  background-image: url("https://i.pinimg.com/736x/dd/2e/31/dd2e315b6a9478333c81b8f95cb2cd03.jpg");
+
 }
 
 .app-title {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
-  -webkit-text-fill-color: 5px black;
-  -webkit-text-stroke: 0.1px rgb(124, 24, 103);
+  color: hotpink;
+  background-color: white;
   text-align: center;
 }
 
@@ -21,10 +17,21 @@ body {
   grid-gap: 20px;
   padding: 20px;
 }
+.App input {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 8px;
+}
 
 .sailorCard {
   border: 1px solid black;
   border-radius: 10px;
+  background-image: url("https://i.pinimg.com/originals/78/c1/3d/78c13d64695ccd3109702f5e2d8eaf71.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .name {
@@ -32,6 +39,12 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 5px;
+}
+
+.marinera {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
 
 .identity {
