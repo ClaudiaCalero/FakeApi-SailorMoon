@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./App.css";
-import Sailor from "./Sailor";
+import sailorCard from "./sailorCard";
 
-function App() {
-  
+
   const moonSailors = [
     {
       marinera: "Sailor Moon",
@@ -96,24 +95,61 @@ function App() {
 
   ];
 
-  return (
-    <div className="App">
-      <h1 className="app-title">Sailor Guardians</h1>
-      <input type="text" placeholder={"Find your Sailor Guardian..."} 
-      onChange={e => {Sailor (e.target.value)}}/>
-      {moonSailors.map((e) => {
-        return (
-          <div> <Sailor marinera={e.marinera} identity={e.indentity} img={e.img} birthday={e.birthday} about={e.about} color={e.color} /> </div>
-          
-          );
-      })}
 
-
-    </div>
-  );
-
-}
-
-
-export default App;
-
+  
+  function App() {
+    // the value of the search field 
+    const [marinera, setMarinera] = useState('');
+  
+    // the search result
+    const [foundMoonSailors, setFoundMoonSailors] = useState(moonSailors);
+  
+    const filter = (e) => {
+      const keyword = e.target.value;
+  
+      if (keyword !== '') {
+        const results = moonSailors.filter((moonSailor) => {
+          return moonSailor.marinera.toLowerCase().startsWith(keyword.toLowerCase());
+          // Use the toLowerCase() method to make it case-insensitive
+        });
+        setFoundMoonSailors(results);
+      } else {
+        setFoundMoonSailors(moonSailors);
+        // If the text field is empty, show all users
+      }
+  
+      setMarinera(keyword);
+    };
+  
+    return (
+      <div className="Sailor">
+          <h1>Sailor Guardians</h1>
+        <input
+          type="search"
+          value={marinera}
+          onChange={filter}
+          className="input"
+          placeholder="Find your Sailor Guardian..."
+        />
+  
+        <div className="sailorCard">
+          {foundMoonSailors && foundMoonSailors.length > 0 ? (
+            foundMoonSailors.map((moonSailor) => (
+              <li key={moonSailor.id} className="moonSailors">
+                <span className="moonSailors-marinera">{moonSailors.marinera}</span>
+                <span className="moonSailors-identity">{moonSailors.indentity}</span>
+                <span className="moonSailors-imagen">{moonSailors.imgen}</span>
+                <span className="moonSailors-birthday">{moonSailors.birthday}</span>
+                <span className="moonSailors-about">{moonSailors.about}</span>
+                <span className="moonSailors-color">{moonSailors.color} </span>
+              </li>
+            ))
+          ) : (
+            <h1>Fight for your light again...</h1>
+          )}
+        </div>
+      </div>
+    );
+  }
+  
+  export default App;

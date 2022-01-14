@@ -3,9 +3,9 @@ body {
 
 }
 
-.app-title {
+.Sailor {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   color: hotpink;
   background-color: white;
   text-align: center;
@@ -17,7 +17,7 @@ body {
   grid-gap: 20px;
   padding: 20px;
 }
-.App input {
+.Sailor input {
   margin-top: 20px;
   width: 300px;
   height: 40px;
@@ -32,13 +32,6 @@ body {
   background-image: url("https://i.pinimg.com/originals/78/c1/3d/78c13d64695ccd3109702f5e2d8eaf71.png");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.name {
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px;
 }
 
 .marinera {
