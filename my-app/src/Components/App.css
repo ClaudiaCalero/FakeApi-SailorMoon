@@ -3,12 +3,19 @@ body {
 
 }
 
-.Sailor {
+.Moon {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 30px;
   color: hotpink;
   background-color: white;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: hotpink;
+  text-align: center;  
 }
 
 .App {
@@ -17,7 +24,7 @@ body {
   grid-gap: 20px;
   padding: 20px;
 }
-.Sailor input {
+ .input {
   margin-top: 20px;
   width: 300px;
   height: 40px;

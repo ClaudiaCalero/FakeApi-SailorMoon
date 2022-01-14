@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import "./App.css";
+import "./App";
 
-const sailorCard = (props) => {
 
-  return (
-      
-      <span className="sailorCard">
-        <span className="marinera">{props.marinera}</span>
-        <span className="identity">identity: {props.identity}</span>
-        <img className="imagen" src={props.img} alt="" />
-        <span className="birthday">birthday: {props.birthday}</span>
-        <span className="about">{props.about}</span>
-        <span className="color">color: {props.color}</span>
-      </span>
+  const Sailor = (props) => {
+
+    return (
+    
+        <li key={props.id} className="sailorCard">
+          <div className="marinera">{props.marinera}</div>
+          <div className="identity">identity: {props.identity}</div>
+          <img className="imagen" src={props.img} alt="" />
+          <div className="birthday">birthday: {props.birthday}</div>
+          <div className="about">{props.about}</div>
+          <div className="color">color:{props.color}</div>
+        </li>
+    
     );
-};
-
-  
+  };
 
 
-export default sailorCard;
+export default Sailor;
+

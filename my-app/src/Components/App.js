@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./App.css";
-import sailorCard from "./sailorCard";
+import Sailor from "./sailorCard"
 
 
   const moonSailors = [
@@ -99,7 +99,7 @@ import sailorCard from "./sailorCard";
   
   function App() {
     // the value of the search field 
-    const [marinera, setMarinera] = useState('');
+    const [Guardian, setGuardian] = useState('');
   
     // the search result
     const [foundMoonSailors, setFoundMoonSailors] = useState(moonSailors);
@@ -114,35 +114,36 @@ import sailorCard from "./sailorCard";
         });
         setFoundMoonSailors(results);
       } else {
-        setFoundMoonSailors(moonSailors);
+        setFoundMoonSailors('');
         // If the text field is empty, show all users
       }
   
-      setMarinera(keyword);
+      setGuardian(keyword);
     };
   
     return (
-      <div className="Sailor">
+      <div className="Moon">
           <h1>Sailor Guardians</h1>
         <input
           type="search"
-          value={marinera}
+          value={Guardian}
           onChange={filter}
           className="input"
           placeholder="Find your Sailor Guardian..."
         />
   
+  
         <div className="sailorCard">
           {foundMoonSailors && foundMoonSailors.length > 0 ? (
-            foundMoonSailors.map((moonSailor) => (
-              <li key={moonSailor.id} className="moonSailors">
-                <span className="moonSailors-marinera">{moonSailors.marinera}</span>
-                <span className="moonSailors-identity">{moonSailors.indentity}</span>
-                <span className="moonSailors-imagen">{moonSailors.imgen}</span>
-                <span className="moonSailors-birthday">{moonSailors.birthday}</span>
-                <span className="moonSailors-about">{moonSailors.about}</span>
-                <span className="moonSailors-color">{moonSailors.color} </span>
-              </li>
+            foundMoonSailors.map((props) => (
+              <li key={props.id} className="Lluna">
+              <div className="marinera">{props.marinera}</div>
+         <div className="identity">identity: {props.identity}</div>
+         <img className="imagen" src={props.img} alt="" />
+         <div className="birthday">birthday: {props.birthday}</div>
+         <div className="about">{props.about}</div>
+         <div className="color">color: {props.color}</div>
+           </li>
             ))
           ) : (
             <h1>Fight for your light again...</h1>
