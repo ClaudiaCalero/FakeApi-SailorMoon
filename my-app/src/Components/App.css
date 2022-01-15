@@ -1,21 +1,20 @@
 body {
   background-image: url("https://i.pinimg.com/736x/dd/2e/31/dd2e315b6a9478333c81b8f95cb2cd03.jpg");
-
 }
 
 .Moon {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 30px;
   color: hotpink;
-  background-color: white;
-  text-align: center;
 }
 
-h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 30px;
+.h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
   color: hotpink;
-  text-align: center;  
+  background-color: white;
+  width: fit-content;
+  text-align: center;
 }
 
 .App {
@@ -24,7 +23,7 @@ h1 {
   grid-gap: 20px;
   padding: 20px;
 }
- .input {
+.input {
   margin-top: 20px;
   width: 300px;
   height: 40px;
@@ -34,23 +33,27 @@ h1 {
 }
 
 .sailorCard {
-  border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   background-image: url("https://i.pinimg.com/originals/78/c1/3d/78c13d64695ccd3109702f5e2d8eaf71.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 4%;
+  width: 80%;
+  margin-left: 9.5%;
+  margin-bottom: 4%;
 }
 
 .marinera {
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
   padding: 10px;
 }
 
 .identity {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   padding: 10px;
+  color: black;
 }
 
 .imagen {
@@ -63,16 +66,19 @@ h1 {
   font-size: 20px;
   text-align: center;
   padding: 10px;
+  color: black;
 }
 
 .about {
   font-size: 20px;
   text-align: center;
   padding: 10px;
+  color: black;
 }
 
 .color {
   font-size: 20px;
   text-align: center;
   padding: 10px;
+  color: black;
 }
